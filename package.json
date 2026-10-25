@@ -1,0 +1,19 @@
+{
+  "name": "python-ai-code-debugger",
+  "version": "1.0.0",
+  "description": "Python AI Code Debugger web application powered by Gemini Flash",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue,green\" \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "test:ai": "npm --prefix server run test:ai",
+    "test:api": "npm --prefix server run test:api",
+    "test:e2e": "npm --prefix server run test:e2e",
+    "build": "npm --prefix client run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
